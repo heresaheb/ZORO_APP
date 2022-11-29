@@ -121,7 +121,9 @@ app.get("/" , (req, res)=>{
 
 //     else{console.log(err);}
 // });
-app.listen(3000,'0.0.0.0',(err)=>{
+const hostname = '0.0.0.0';
+const port = 3000;
+app.listen(port, hostname, (err)=>{
     if(!err)  { console.log(`Server Listening On: https://${hostname}:${port}/`); }
 
     else{console.log(err);}
