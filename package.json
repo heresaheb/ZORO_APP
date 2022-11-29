@@ -1,0 +1,16 @@
+{
+  "name": "streaming-website-project",
+  "version": "1.0.0",
+  "description": "Anime Streaming Website Clone",
+  "main": "app.js",
+  "scripts": {
+    "start": "cd Server && nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8"
+  }
+}

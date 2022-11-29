@@ -1,0 +1,527 @@
+* { 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* target all anchor / link elemets */
+a:hover{
+    color: #cae962;
+}
+
+body{
+    margin: 0px;
+    background-color: rgba(0,0,0,0.9);
+}
+
+#menu{
+    padding-bottom: 20px;
+}
+
+
+/* For top navbar */
+.nav-bar{
+    color: rgb(255,255,255);
+    height: 20px;
+    width: 100%;
+    margin-top: 0%;
+}
+
+/* navbar each elements */
+#nav-options > ul{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+}
+
+#nav-options > ul > li{
+    list-style: none;
+}
+
+/* contains logo , rootImage , searchBox, searchButton */
+#top-back{
+   margin: 0px;
+    background: url("../Images/zoro-bg.jpg");
+     /* background: linear-gradient( rgba(0, 0, 0, 1) , rgba(0,0,0,0.3)) ; */
+     background-repeat: no-repeat;
+     width: 100%;
+     height: 34.4em;
+}
+/* navbar => menu  */
+.nav-bar > h4{
+    margin: 0px;
+}
+/* Top search: elements */
+  div strong , a {
+    color: rgb(255,255,255);
+    text-decoration: none;
+    }
+
+/*  search bar , top search , search button */
+ #search-box{
+    position: relative;
+    height: 40px;
+    width:67%;
+    border-radius: 200px;
+    float: left;
+    margin-right: 6px;
+    margin-top: 0px;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+/* for only search button */
+.search-button{
+    height: 50px;
+    width: 65px;
+    border-radius: 500px;
+    background-color: #cae962;
+    margin-right: 0%;
+    position: relative;
+}
+    div #top-search > strong{
+    color: rgb(255,255,255);
+    font-size: large;
+    }
+
+/*  contains from search-box */
+#top-search {
+    height: 200px;
+    text-align: justify;
+    width: 50%;
+    margin-left: 0px;
+    position: relative;
+    margin-top: 10px;
+}
+
+#root-image{
+    margin: 0%;
+    position: relative;
+    float: right;
+    height: 30em;
+    width: 38em;
+}
+/* mainTop level div element */
+.head-container{
+    margin-top: 50px;
+    height: 80px;
+    width: 83%;
+    margin-left: 12%;
+    margin-right: 0%;
+}
+/* Page logo */
+ img[src^='../Images/logo.png']{
+    height: 55px;
+    width:200px;
+    margin-top: 10%;
+}
+
+/* view full site */
+
+#full-site {
+    background-color:#cae962 ;
+    height: 20%;
+    width: 85%;
+    text-align: center;
+    margin-left: 8%;
+    border-radius: 0% 0% 30px 30px;    /* Top-left  Top-right  Bottom-left  Bottom-right  corners  */
+    padding: 16px;
+    margin-bottom: 40px;
+}
+#full-site > strong > a {
+    color: rgba(0,0,0,1);
+}
+#full-site > strong {
+    color: rgba(0,0,0,1);
+    font-size: 27px;
+}
+
+#share-zoro{
+    height: 70px;
+    width: 85%;
+    margin-top: 0px;
+    margin-left: 130px;
+    background-color: rgba(0,0,0,1);
+    border-radius: 20px;
+}
+/* share zoro left border */
+#share-zoro > div {
+    border-radius: 10px;
+    height: 100%;
+    border-left: 5px;
+    border-style: solid;
+    border-color: #cae962;
+    margin-left: 18px;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-right: 0px;
+}
+/* share zoro element */
+#share-zoro >div > h3{
+
+    padding-top: 10px;
+    color: #cae962;
+    margin-left: 30px;
+    margin-top: 60px;
+    margin-bottom: 0px;
+
+}
+/* to your friends */
+#share-zoro > div>  h5{
+    margin: 10px 30px 5px 30px;     /* top , right , bottom , left*/
+    color: rgb(255,255,255);
+}
+
+
+
+/* Page bottom side start here */
+#site-details > h1 {
+    color: rgb(255,255,255);
+}
+
+/* bottom side left block */
+#site-details{
+    position: relative;
+    float: left;
+    width: 45%;
+    text-align: justify;
+    margin-left: 166px;
+    font-size: 14px;
+}
+
+
+/* under site details each and every sections */
+.site-section{
+    color: rgba(255,255,255,0.7);
+}
+
+/* under site details each and every sections headers */
+.site-section > h1 {
+    color: rgb(255,255,255);
+}
+/* contains last left site section of every section after (3/So what) */
+.site-section3{
+    margin: 18px;
+    color: #eee;
+}
+
+/* last left site section of  li (start from safety) elements */
+
+.site-section3 > li > strong {
+    color: rgba(255,255,255,0.8);
+}
+
+/* after each li elemets */
+.site-section3 > li{
+    color: rgba(255,255,255,0.7);
+}
+
+/* #site-details > span {
+    color: rgba(255,255,255,0.7);
+} */
+
+/* bottom side right block */
+#trending-posts{
+    position: relative;
+    float: right;
+    width: 30%;
+    margin-right: 10%;
+}
+
+#trending-posts >h3 {
+    color: rgba(255,255,255,1);
+    font-size: 35px;
+    font-weight: 600;
+}
+/* for comment sections. */
+.right-comment{
+    background-color: rgba(56, 52, 52, 0.929);
+    border-radius: 15px;
+    height: 220px;
+    text-align: justify;
+}
+
+/* right side comment upper section */
+.right-comment > div {
+    color: rgba(255,255,255,0.7);
+    margin-left: 45px;
+    margin-bottom: 30px;
+    height: 80%;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+.right-comment > div > div {
+    font-size: 13px;
+    height: 29%;
+    width: 100%;
+}
+
+/* Tiny comment icon */
+.right-comment > div > h5 > i {
+    float: right;
+    position: relative;
+    margin-right: 15px;
+    margin-top: 30px;
+
+}
+.right-comment > div > h5 {
+    /* margin-right: 7px;
+    margin-left: 5px; */
+    margin-top: 45px;
+    margin-bottom: 15px;
+    /* position: relative; */
+}
+
+/* seactions => General */
+.right-comment > div > h5  :first-child {
+    float :left;
+    margin-right: 15px;
+    margin-left: 5px;
+    margin-top: 30px;
+}
+
+/*  sections => Hours ago */
+.right-comment > div > h5  :nth-child(2){
+    float: left;
+    margin-left: 15px;
+    margin-top: 30px;
+}
+
+/* section headline */
+.right-comment >div >  a > h4 {
+    font-size: medium;
+    margin-top: 43px;
+    margin-left: 7px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    
+}
+
+.right-comment > div > div {
+    margin-bottom: 10px;
+}
+/* comment section profile image */
+.right-comment > div > div > img {
+    border-radius: 100%;
+    height: 40px;
+    margin-top: 5px;
+    font-size: 10px;
+}
+/* comment text */
+.right-comment > div > div > div {
+    font-size: 13px;
+}
+/* for read more option right side comment section section */
+#read-more{
+    background-color: rgba(56, 52, 52, 0.929);
+    width: 100%;
+    border-radius: 100px;
+    margin-top: 20px ;
+    height: 30px;
+    padding-top: 6px;
+}
+#read-more > a {
+    margin-left: 170px;
+    font-size: small;
+}
+/* least section at the last left side section */
+#footer{
+    height:50%;
+    width: 60%;
+    margin-top: 19%;
+    float: left;
+    margin-bottom: 20px;
+}
+#site-details > #footer > h5{
+    color: rgba(255,255,255,0.7);
+}
+
+
+#site-details > #footer > a {
+    color: rgba(255,255,255,0.7);
+    
+}
+#site-details > #footer > span{
+    color: rgba(255,255,255,0.7);
+}
+
+
+@media screen and (max-width: 425px) {
+
+    #nav-button{
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+
+    #menu{
+        font-size: 10px;
+    }
+
+    #nav-options{
+        width: 6cm;
+        height: 5cm;
+        margin-left: 22px;
+        padding-right: 44px;
+        padding-top: 7px;
+        padding-bottom: 5px;
+        border-radius: 20px;
+        justify-content: center;
+    }
+
+    #nav-options > ul {
+        /* visibility: hidden; */
+        list-style: none;
+        flex-direction: column;
+    }
+
+    #nav-options > ul > li {
+        border-bottom: solid 1px;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+
+
+
+    img[src^='../Images/logo.png'] {
+        margin-top: 0%;
+        height: 63%;
+        width: 55%;
+    }
+
+    .head-container {
+        margin-left: 25%;
+    }
+    
+    #top-search{
+        width: fit-content;
+        position: unset;
+    }
+
+    #search-box {
+        position: absolute;
+        margin-top: 11%;
+        height: 33px;
+        width: 59%;
+        margin-left: -20%;
+        background-color: #000000;
+        color: #eee;
+        font-size: 13px;
+    }
+
+    #top-back {
+        padding-left: 24px;
+        padding-right: 20px;
+        position: absolute;
+        height: 23.4em ;
+        width: 9.8cm;
+        background-size: cover;
+    }
+
+     #root-image {
+        visibility: hidden;}
+
+        .search-button {
+
+            position: absolute;
+            border: none;
+            left: 76%;
+            top:46%;
+            height: 36px;
+            width: 42px;
+
+        }
+
+        #top-search-list{
+            margin-top: 3cm;
+            margin-left: -23%;
+            position: absolute;
+            margin-right: 36px;
+            font-size: 12px;
+        }
+
+        #full-site{
+            position: relative;
+            top: 22em;
+            left: 14px;
+            padding: 10px;
+            border-radius: 50px;
+            width: 6.5cm;
+            margin-left: 15%;
+        }
+
+        #full-site > strong {
+            font-size: 18px;}
+
+
+        #site-details {
+            position: unset;
+            /* margin-top: 9cm; */
+        }
+
+        #share-zoro{
+            height: 4em;
+            width: 9.6cm;
+            margin-left: 5px;
+            padding-left: 10px;
+            padding-right: 20px;
+            margin-top: 10cm;
+        }
+
+        #share-zoro > div> h3 {
+            font-size: 15px;
+        }
+
+        .site-section{
+            margin-left: -3cm;
+            width: 7cm;
+            font-size: 11px;
+        }
+
+        .site-section3{
+            width: 7cm;
+            margin-left: -3cm;
+        }
+
+
+
+        #trending-posts > h3 {
+            margin-top: -3cm;
+            margin-left: 50px;
+            width: 7cm;
+        }
+
+        .right-comment , #read-more{
+            width: 7.78cm;
+            margin-left: 1cm;
+        }
+
+        #read-more > a {
+            margin-left: 121px;
+        }
+
+
+        #trending-posts {
+            position: absolute;
+            margin-top: 46cm;
+        }
+        .right-comment > div {
+            margin-left: 29px;
+        }
+
+        .right-comment > div > div {
+            font-size: 12px;
+        }
+
+        .right-comment > div > div > img {
+            height: 27px;
+        }
+
+        #footer {
+            position: absolute;
+            margin-top: 33cm;
+            padding-bottom: 20px;
+            margin-left: -3cm;
+            width: 8cm;
+            height: 2cm;
+        }
+
+}

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css Files/movies.css">
+    <link rel="stylesheet" href="../css Files/contentPage.css">
+    <link rel="stylesheet" href="../css Files/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css Files/watch.css">
+</head>
+
+<body>
+
+    <div id="nav-bar">
+        <button id="nav-button">
+            <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+        </button>
+
+        <img id="logo" src="../Images/logo.png" alt="Home Page Logo">
+
+        <form action="/search" autocapitalize="off">
+
+            <input type="text" id="search-box" placeholder="Serach Anime...">
+            <div>
+                <a href="/search">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </a>
+
+            </div>
+
+            <button><a href="/filter">Filter</a></button>
+
+        </form>
+
+
+        <div class="social-section">
+            <a href="www.telegram.com">
+
+                <img src="../Images/additional icons/icons8-telegram-app-48.png" alt="telegram-icon">
+            </a>
+        </div>
+
+        <!-- <div class="social-section" id="discord">
+            <a href="www.discord.com">
+            <img src="../Images/additional icons/icons8-discord-bubble-64.png" alt="discord-icon">
+        </a>
+        </div> -->
+
+        <div class="social-section">
+            <a href="www.twitter.com">
+                <img src="../Images/additional icons/icons8-twitter-circled-48.png" alt="twitter-icon">
+            </a>
+        </div>
+
+
+        <div class="social-section"> <img src="../Images/movies/live.svg" alt="Live Logo">
+            <br>
+            <a href="#">Watch2gether</a>
+        </div>
+
+        <button id="random"><i class="fa fa-random fa-2x" aria-hidden="true"></i>
+            <br>
+            <a href="#">random</a>
+        </button>
+
+        <div id="donate"><a href="#">Donate</a></div>
+
+        <div id="login">
+            <a href="#">Login</a>
+        </div>
+
+    </div>
+
+    <div id="watch-first-container">
+
+        <img src="../Images/movies/Top-4/<%= AnimeData[TargetAnimeId +1].Image_Path  %>" alt="backgroundImage">
+
+        <ul>
+            <li>Home</li>
+            <li>Movie</li>
+            <li><%= TargetAnime.Anime_Name %></li>
+        </ul>
+
+
+
+        <div id="watch-sec-container">
+            <div id="list-of-ep">
+                <p>List of episodes:
+                    <input type="search" name="" id="" placeholder="🔍No. of Ep">
+                </p>
+
+                <ol>
+                    <% for(let j= 1; j <= 12 ; j++) { %> 
+                    <li><a> Episode <%= j %> </a></li>
+                        <% } %> 
+
+                    <!-- <li><a>ep2 fsf ffsd sdfdsf</a></li>
+                    <li><a>ep3 fdsfd dsfdsf</a></li> -->
+                </ol>
+            </div>
+
+            <div id="video-player">
+                <iframe src="https://streamta./e/b2k7lQvAwgFPzKV/" width="984" height="520" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+
+                <div>
+                    <p>
+                        <button>
+                            <i class="fa fa-lightbulb-o" aria-hidden="true"></i> &nbsp; Light On
+                        </button>
+
+                        <button id="backward">
+                            <i class="fa fa-backward" aria-hidden="true"></i>
+                            Prev
+                        </button>
+                        <button id="forward"> Next
+                            <i class="fa fa-forward" aria-hidden="true"></i>
+                        </button>
+                    </p>
+
+                    <div id="watch-view-bottom">
+                        <div id="watch-ep">
+                            <h5>
+                                You are watching
+                            </h5>
+                            <strong>Episode 1</strong>
+                            <p>
+                                If current server doesn't work please try other servers beside.
+                            </p>
+                        </div>
+
+                        <div id="sub-dub">
+
+                            <div id="sub-dub-div1">
+                                <div>
+                                    <i class="fa fa-cc" aria-hidden="true"></i> <strong>SUB: </strong>
+                                </div>
+
+                                <p class="button-active"><button>Youtube</button></p>
+                                <p><button>VideStream</button></p>
+                                <p><button>StreamSB</button></p>
+                            </div>
+
+
+                            <div>
+                                <div>
+                                    <i class="fa fa-cc" aria-hidden="true"></i> <strong>DUB: </strong>
+                                </div>
+
+                                <p class="button-active"><button>Youtube</button></p>
+                                <p><button>VideStream</button></p>
+                                <p><button>StreamSB</button></p>
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div id="watch-first-sec-container">
+            <img src="../Images/movies/Top-4/<%= AnimeData[TargetAnimeId +1].Image_Path  %>" alt="<%= TargetAnimeId +1 %>">
+
+            <a id="view-details" href="/movies/contentPage?id=<%= TargetAnimeId + 2%>">View Details</a>
+            <!-- <a id="view-details" href="javascript:sayHello();">View Details</a> -->
+
+            <div id="content-pack">
+
+                <div id="content-details">
+
+                    <h1><a href=""><%= TargetAnime.Anime_Name %></a></h1>
+
+                    <span class="type">HD</span>
+                    <span class="type">SUB</span>
+                    <div id="after-type">
+                        <ul>
+                            <li>TV</li>
+                            <li>EP8</li>
+                            <li>23m</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="paraGraph" id="desciption">
+                        <%= AnimeData[TargetAnimeId +1].Anime_Desc %> 
+                    </div>
+
+                    <div class="paraGraph" id="para-use-hide">Zoro is the best site to watch <strong> <%= TargetAnime.Anime_Name %> </strong> SUB online, or you can even watch <strong> <%= TargetAnime.Anime_Name %> </strong> DUB in HD quality. You can also find Project No.9 anime on Zoro
+                        website.</div>
+
+
+                </div>
+
+
+                <div id="rating-reaction">
+                    <div>
+                        ⭐ <strong>8.6</strong>
+                        <i>&nbsp;(5539 voted)&nbsp;</i>
+                        <i>&nbsp; Vote Now</i>
+                        <h5>What do you think about this anime?</h5>
+                    </div>
+
+                    <div>
+                        <button>
+                            😪
+                            <br>
+                            Boring
+                        </button>
+
+                        <button>
+                            😎<br>Great
+                        </button>
+
+                        <button>
+                            🤯
+                            <br>
+                            Awesome
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="share-zoro">
+            <div>
+                <h3>Share Anime </h3>
+                <h5>to your friends </h5>
+            </div>
+        </div>
+
+        <h2 id="comment-start">Comments 
+            <span id="most-pop">Most Popular</span>
+        </h2>
+
+
+            
+            <div id="comment-right">
+
+                <a>Episode1</a>
+
+                <strong><i class="fa fa-comment-o" aria-hidden="true"></i>
+                    6 Comments</strong>
+
+
+                <a href="#"><i class="fa fa-sort" aria-hidden="true"></i>Sort By</a>
+
+                <div id="comment-sec">
+                    <img src="../Images/profile_Pics/av-db-01.jpeg" alt="profile photo">
+                    <div>
+                        <p>Comment as
+                            <span>Anonymous</span>
+                        </p>
+
+                        <form action="/comment" method="post">
+                            <textarea name="" id="" cols="80" rows="5" placeholder="Leave a comment here!"></textarea>
+                        </form>
+
+                        <div>
+                            <button>Cancel</button>
+                            <button>Post</button>
+
+                        </div>
+                    </div>
+
+                    <img src="../Images/profile_Pics/av-db-01.jpeg" alt="profile photo">
+                    <div class="comments">
+                        <p>Saheb_YR
+                            <i>1 days ago</i>
+                        </p>
+
+                        <p>**** I was getting a strong Astro boy nostalgia vibes from the first episode. Then I look it up and it IS Astro boy, the prequel!</p>
+
+                        <button>                        <i class="fa fa-share" aria-hidden="true"> Reply</i></button>
+
+                        <button>
+                            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                        </button>
+
+                        <button>                        <i class="fa fa-thumbs-o-down" aria-hidden="true"></i></button>
+
+                        <button>                     <i class="fa fa-ellipsis-h" aria-hidden="true"> More</i></button>
+                    </div>
+
+                    <img src="../Images/profile_Pics/av-db-01.jpeg" alt="profile photo">
+                    <div class="comments">
+                        <p>Saheb_YR
+                            <i>1 days ago</i>
+                        </p>
+
+                        <p>**** I was getting a strong Astro boy nostalgia vibes from the first episode. Then I look it up and it IS Astro boy, the prequel!</p>
+
+                        <button>                        <i class="fa fa-share" aria-hidden="true"> Reply</i></button>
+
+                        <button>
+                            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                        </button>
+
+                        <button>                        <i class="fa fa-thumbs-o-down" aria-hidden="true"></i></button>
+
+                        <button>                     <i class="fa fa-ellipsis-h" aria-hidden="true"> More</i></button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="right-container">
+        
+        
+            <div class="today-section">
+        
+                    <img src="../Images/movies/today-section-images/img03.jpg" alt="No1 img">
+        
+            <div>
+                        <a href="#">One Piece</a>
+                   
+                    <div>
+                        <h5>
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                        58,658</h5>
+                        
+                            <h5>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            144,635</h5>
+        
+                        </div>
+        
+            </div>
+                        
+                 </div>
+        
+                 <div class="today-section">
+        
+        
+                    <img src="../Images/movies/today-section-images/img01.jpg" alt="No1 img">
+        
+            <div>
+                        <a href="#">One Piece</a>
+                   
+                    <div>
+                        <h5>
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                        58,658</h5>
+                        
+                            <h5>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            144,635</h5>
+        
+                        </div>
+        
+            </div>
+                        
+                 </div>
+        
+         <div class="today-section">
+        
+        
+                    <img src="../Images/movies/today-section-images/img02.jpg" alt="No1 img">
+        
+                <div>
+                        <a href="#">Naruto</a>
+                   
+                    <div>
+                        <h5>
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                        58,658</h5>
+                        
+                            <h5>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            144,635</h5>
+        
+                        </div>
+        
+                 </div>
+                        
+        </div>
+        
+                 
+                 <div class="today-section">
+        
+        
+                    <img src="../Images/movies/today-section-images/img04.png" alt="No1 img">
+        
+            <div>
+                        <a href="#">Classroom of the Elite 2nd Season</a>
+                   
+                    <div>
+                        <h5>
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                        58,658</h5>
+                        
+                            <h5>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            144,635</h5>
+        
+                        </div>
+        
+            </div>
+                        
+                 </div>
+        
+        
+        
+        
+            </div>
+
+
+
+        <h2 id="Characters">Characters & Voice Actors</h2>
+
+        <div id="artist-container">
+            <div class="artist">
+                <img src="../Images/profile_Pics/av-db-01.jpeg" alt="artist_Profile_photo">
+                <h5>Name rtrthtrh</h5>
+                <i>Writter nfgjghhj</i>
+ 
+            </div>
+
+            <div class="artist">
+                <img src="../Images/profile_Pics/av-db-01.jpeg" alt="artist_Profile_photo">
+                <h5>Name rtrthtrh</h5>
+                <i>Writter nfgjghhj</i>
+ 
+            </div>
+
+            <div class="artist">
+                <img src="../Images/profile_Pics/av-db-01.jpeg" alt="artist_Profile_photo">
+                <h5>Name rtrthtrh</h5>
+                <i>Writter nfgjghhj</i>
+ 
+            </div>
+
+            <div class="artist">
+                <img src="../Images/profile_Pics/av-db-01.jpeg" alt="artist_Profile_photo">
+                <h5>Name rtrthtrh</h5>
+                <i>Writter nfgjghhj</i>
+ 
+            </div>
+
+        </div>
+
+
+        <div id="left-container">
+            <h4 id="movie-anime">Movie Anime</h4>
+    
+    <!-- For Top 4 Movie Anime -->
+    
+    <% for (let i = 07 ; i < AnimeData.length -6; i++) { %>
+        <div class="big-four-tile" id="first-left-tile">
+            <h5 class="sub-dub">SUB</h5>
+            <h5 class="ep">Ep Full</h5>
+    
+            <a class="play" href="/movies/contentPage?id=<%= AnimeData[i].id  %>">
+                <i class="fa fa-play fa-4x" aria-hidden="true"></i>
+            </a>
+    
+            <img src="../Images/movies/Top-4/<%= AnimeData[i].Image_Path %> "
+             alt= "<%= AnimeData[i].Image_Path  %>" >
+    
+    
+                <h4><a href="/movies/contentPage?id=<%= AnimeData[i].id %>">
+                    <%= AnimeData[i].Anime_Name %> </a>
+                       
+                    <% if(AnimeData[i].Anime_Desc != "null") { %>
+                        <p>  <%=  AnimeData[i].Anime_Desc %> </p> 
+                    <% } else{ %>
+
+                        <p class="description">  Not Available </p> 
+                        <% } %> 
+    
+                
+                    <strong> Movie  * <%= AnimeData[i].Anime_Time %> m </strong>               
+                
+                </h4>
+        </div>
+
+<% }  %> 
+    
+        </div>
+
+    </div>
+
+    <div id="footer">
+
+        <div>
+            <img id="logo" src="../Images/logo.png" alt="" srcset="">
+
+                <div class="social-section" id="telegram">
+                    <a href="www.telegram.com">
+        
+                        <img src="../Images/additional icons/icons8-telegram-app-48.png" alt="telegram-icon">
+                    </a>
+                </div>
+                <div class="social-section">
+                    <a href="www.twitter.com">
+                        <img src="../Images/additional icons/icons8-twitter-circled-48.png" alt="twitter-icon">
+                    </a>
+                </div>
+        </div>
+
+        <div>
+            <h3>A-Z LIST</h3>
+            <span>Searching anime order by alphabet name A to Z.</span>
+        </div>
+
+        <div> 
+            <a href="#" class="alphabet-search">A</a>
+            <a href="#" class="alphabet-search">A</a>
+
+         </div>
+
+         <div>
+            <span><a href="#">Terms and service</a></span>
+
+            <span><a href="#">Contact</a></span>
+
+         </div>
+
+         <div>
+            <span>Zoro does not store any files on our server, we only linked to the media which is hosted on 3rd party services.</span>
+            <h5>© Zoro.to</h5>
+         </div>
+            
+    </div>
+
+
+
+
+    <!-- <script type="module" src="../ScriptFile/movies.js"></script> -->
+    <script src="../ScriptFile/watch.js"></script>
+</body>
+
+</html>

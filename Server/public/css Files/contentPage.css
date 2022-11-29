@@ -1,0 +1,925 @@
+* { 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* target all anchor / link elemets */
+a:hover{
+    /* color: #cae962; */
+    cursor: pointer;
+}
+
+body{
+    margin: 0%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+
+#nav-bar{
+    background-color: rgba(0,0,0,1);
+    height: 70px;
+    position: fixed;
+    z-index:1;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    margin-bottom: 0%;
+}
+
+#logo{
+    height: 1.5cm;
+    margin: 2px 10px;
+}
+
+
+/* nav-bar 1st button */
+#nav-bar > button:first-child{
+    height: fit-content;
+    margin-top: 15px;
+    margin-left: 8px;
+    margin-right: 0px;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.1);
+}
+
+#nav-bar > button:first-child > i {
+    color: rgb(255,255,255);
+}
+
+#nav-bar > button:first-child:hover{
+    border-color: #cae962;
+}
+
+/* For page logo */
+#nav-bar > a > img {
+    height: 50px;
+    margin-left: 40px;
+    margin-right: 25px;
+    margin-top: 10px;
+    
+}
+/* Whole search content */
+#nav-bar > form {
+    position: relative;
+    margin-right: 25px;
+}
+
+/* this inside input tag present */
+#nav-bar > form > div {
+    float: right;
+    margin-left: 250px; 
+    display: flex;
+    flex-direction: row;
+}
+
+/* For input box */
+#nav-bar > form >  input {
+    position: absolute;
+    width: 300px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+/* Filter Button */
+#nav-bar > form > button {
+    float: right;
+    position: absolute;
+    margin-left: 270px;
+    margin-top: 20px;
+    text-decoration: none;
+    background-color:  rgba(0,0,0,0.7);
+}
+
+#nav-bar > form > button:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* inside filter button */
+#nav-bar > form > button > a {
+    text-decoration: none;
+    color: rgb(255,255,255);
+}
+
+
+/* Search Icon */
+#nav-bar > form > div > a {
+    position: absolute;
+    margin-top: 20px;
+    color: black;
+}
+/* For after input section */
+.social-section{
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+/* For Telegram option */
+
+#nav-bar > .social-section > a > img[src$="telegram-app-48.png"] {
+   margin-left: 75px;
+}
+
+#nav-bar > .social-section > a > img[src$="icons8-discord-bubble-64.png"] {
+   height: 20px;
+   margin-top: 9px;
+   margin-left: 8px;
+ }
+
+ #discord{
+    background-color: rgba(255,255,255,0.96);
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    margin-top: 15px;
+ }
+/* live Icon */
+.social-section > img[src $="live.svg" ] {
+    height: 27px;
+    margin-left: 38px;
+    margin-top: 3px;
+
+}
+
+#nav-bar > .social-section > a {
+    color: rgb(255,255,255);
+    font-size: 13px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+#nav-bar > .social-section > a:hover{
+    color: #cae962;
+}
+
+/* nav-bar Random button */
+#nav-bar > #random {
+background-color: rgba(0,0,0,0.01);
+margin-left: 8px;
+margin-top: 17px;
+margin-bottom: 13px;
+}
+
+#nav-bar > #random {
+    border: none;
+}
+
+#nav-bar > button > i{
+    color:#cae962;
+}
+
+#nav-bar > button > a {
+    text-decoration: none;
+    color: rgb(255,255,255);
+}
+
+#nav-bar > button > a:hover {
+    color: #cae962;
+}
+
+/* Donate Button Only */
+#donate{
+    margin-right: 50px;
+    margin-left: 70px;
+    background-color: rgb(12, 255, 121);
+    border-radius: 60px;
+    width: 70px;
+    height: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding-left: 14px;
+    text-align: center;
+    padding-top: 10px;
+    padding-right: 14px;
+}
+/* Inside Donate button */
+ #donate > a {
+    text-decoration: none;
+    font-size: medium;
+    font-size: large;
+    color: rgb(0,0,0);
+    font-weight: 500;
+}
+
+#donate > a:hover{
+    color: rgb(255,255,255);
+}
+
+ /* For login button only */
+    #login{
+        margin-left: 90px;
+        background-color: green;
+        text-align: center;
+        border-radius: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 20px;
+        margin-top: 8px;
+        margin-bottom: 8px ;
+        float: right;
+    }
+/* Inside login button */
+#nav-bar > #login > a {
+    margin: 10px;
+    color: rgb(255,255,255);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#nav-bar > #login > a:hover{
+    color: rgb(0,0,0);
+}
+
+#main-content{
+    height: 0cm;
+}
+
+/* Responsive Nav-Bar for mobile screen */
+
+@media screen and (max-width: 425px){
+
+    body{
+        width: auto;
+    }
+
+
+    /* For page logo */
+    #nav-bar > img {
+    height: 40%;
+    margin-left: 20px;
+    margin-right: 15px;
+    margin-top: 14px;
+    
+    }
+    #nav-bar{
+        position: unset;
+        box-sizing: unset;
+    }
+    #nav-bar > form >input{
+        visibility: hidden;
+    }
+
+    /* Search Icon */
+    #nav-bar > form > div {
+        position: absolute;
+        margin-top: 10px;
+        margin-right: 1px;
+        margin-left: 30px;
+
+           
+    }
+    #nav-bar > form > div > a {
+        margin-left: 120px;
+        margin-top: 13px;
+        color: #cae962;
+    }
+    .social-section{
+        visibility: hidden;
+    }
+
+    /* For login button only */
+ #login{
+    visibility: hidden;
+}
+
+.hide-for-pc{
+    visibility: hidden;
+}
+
+/* Background cover */
+    div#content-cover > img{
+    height: 115%;
+    }
+
+}
+/*  Nav-Bar All Elements End Here */
+
+
+/* Background cover */
+#content-cover > img{
+    margin-top: 10px;
+    /* background: url(../Images/movies/groundImages/content01.jpg); */
+    height: 180%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(12px);
+    position: absolute;
+}
+
+/* left side image */
+#content-image > img {
+    height: 7cm;
+    width: 5cm;
+    padding-left: 30px;
+    padding-top: 40px;
+    padding-right: 20px;
+    margin-left: 0%;
+}
+
+/* inside main content */
+#left-container01{
+    margin-top: 1.8cm;
+    height: 21cm;
+    width: 75%;
+    position:absolute;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0%;
+    box-sizing: border-box;
+    
+
+}
+/* This content only for mobile users */
+#visble-for-mobile{
+    visibility: hidden;
+}
+
+/* Delete this value */
+#genres{
+    margin-top: 3px;
+}
+
+/* This content only for pc users */
+#para-use-hide{
+    visibility: visible;
+}
+
+
+#desciption{
+    height: 20%;
+    overflow: hidden;
+}
+
+ @media screen  and (max-width:425px){ 
+
+    #left-container > h4 {
+        margin-left: 20px;
+    }
+
+    body > #main-container > h3{
+        visibility: hidden;
+    }
+
+    /* Background cover*/
+    #content-cover{
+        height:93%;
+        width: 100%;
+    }
+
+     #left-container01{
+        text-align: center;
+        height: 18.6cm;
+        width: 100%;
+        display: block;
+        flex-wrap: nowrap;
+        box-sizing: unset;
+     }
+
+    #content-image > img {
+        height: 19%;
+        width: 27%;
+        padding-top: 20px;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    /* Top-center section */
+    div #content-details{
+        display: contents;
+        padding-left: 20px;
+        margin: unset;
+        background-color: unset;
+        position: relative;
+        padding-right: 20px;
+    }
+    div #content-details > h1{
+        font-weight: 50;
+        font-size: 20px;
+        margin-top: 0%;
+    }
+
+    div #content-details > button{
+        margin-top: 60px;
+        margin-right: 10px;
+        padding: 5px 15px;
+    }
+
+
+    div #content-details > button > a > span {
+    font-size: 10px;
+    }
+
+    div #desciption{
+    height: 2cm;
+    width: fit-content;
+    overflow: auto;  
+    font-size: 10px;
+    margin-left: 10px;
+    }
+
+    /* This content only for PC users */
+    #para-use-hide{
+    visibility: hidden;
+    }
+
+    /* This content only for mobile users */
+    #visble-for-mobile{
+    visibility: visible;
+    position: absolute;
+    margin-top: 16.4cm;
+    font-size: 9px;
+    word-break: break-word;
+    padding-left: 30px;
+    margin-right: 30px;
+    }
+
+    div #share-zoro{
+        margin-top: -4cm;
+    }
+
+    /* share zoro left border */
+    div #share-zoro >div {
+    margin-top: 10%;
+    }
+
+    div #share-zoro >div > h3{
+        color: #cae962;
+        margin-right: 60%;
+        font-size: 10px;
+        margin-left: unset;
+    }
+
+    div #share-zoro > div > h5{
+        margin: 5px 0px;
+        margin-right: 56%;
+        font-size: 10px;
+    }
+
+    div #content-details >div > ul {
+        visibility: hidden;
+    }
+
+    /* Right side distinct container */
+    div #content-right-container{
+    margin-top: 12.4cm;
+    width: 90%;
+    margin-right: 0px;
+    margin-left: 40px;
+    position: absolute;
+    height: 18.4cm;
+    color: unset;
+    background-color: unset;
+    padding-top: 0%;
+    padding-left: 0%;
+    }
+
+    div #content-right-container  > p { 
+         font-size: 10px; 
+        }
+    
+    #genres{
+            margin-top: 15px;
+    }    
+
+    div .type{
+        font-size: 8px;
+    } 
+
+    div #main-container {
+        position: relative;
+        margin-top: 18.6cm;
+    }
+
+       /*  Most Viewed exclude from Right container */
+    div #main-container > h3 {
+    visibility: hidden;
+    }
+
+    /* left Side container start from here */
+    div #left-container {
+    width: unset;
+    margin-left: 5%;
+    }
+
+/* Right Side container start from here */
+    div #right-container {
+        width: 84%;
+        padding-top: 45cm;
+        padding-bottom: 6px;
+        margin-left: 7%;
+    }
+
+    /* For Images */
+    div .big-four-tile > img {
+        height: 180px;
+        width: 100%;
+    }
+
+    /* For sub/Dub & Episode */
+    div .big-four-tile > h5 {
+        font-size: 67%;
+        /* margin-left: 28%; */
+        margin-top: 38%;
+    }
+
+    /* For Play button  Using <a> tag */
+    div .play {
+        height: 5.5%;
+        width: 42%;
+    }
+    /* Size of play icon     */
+    .fa-4x {
+        font-size: 231%;
+    }
+
+    .big-four-tile > h4 > p {
+        margin-bottom: 5%;
+    }
+
+    /* For First big four tiles */
+    div .big-four-tile{
+        width: 42%;
+        height: auto;
+}
+    
+    /* for Episode */
+    div .ep {
+        margin-left: 27%;
+    }
+
+ }
+ /* Responsive for mobile page end here */
+
+
+
+
+/* Top-center section */
+#content-details{
+    height: 100%;
+    background-color: rgba(0,0,0,0.1);
+    margin: 0%;
+    position: absolute; 
+    margin-left: 6.7cm;
+    padding-right: 1cm;
+}
+#content-details >div > ul {
+    display: flex;
+    flex-wrap: wrap;
+    visibility: visible;
+    position: absolute;
+    margin-bottom: 0%;
+}
+#content-details div > ul >li {
+    margin-right: 20px;
+    color: rgb(255,255,255);
+}
+
+#content-details > h1{
+    color: rgb(255,255,255);
+    font-weight: 500;
+    font-size: 50px;
+    word-wrap: break-word;
+}
+
+/* For type of content like sub/ dub genres */
+.type{
+    color: rgb(255,255,255);
+    border: solid 2px rgb(255,255,255);
+    padding:5px 5px;
+    border-radius: 5px;
+    font-weight: 100;
+    font-size: 15px;
+}
+/* For TV EP8 23m */
+#after-type{
+    visibility: visible;
+    margin-left: 68px;
+    margin-top: -30px;
+}
+
+/* for play and add list button */
+#content-details > button{
+    margin-top: 87px;
+    padding: 10px 35px;
+    border: none;
+    border-radius: 20px;
+    background: #cae962;
+    margin-right: 15px;
+}
+#content-details > button:hover{
+    background-color: brown;
+}
+#content-details > button > a >span:hover{
+   color: aliceblue;
+}
+#content-details > button:last-child{
+    background: rgb(255,255,255);
+}
+#content-details > button > a{
+    text-decoration: none;
+    color: rgb(0,0,0);
+}
+
+#content-details > button > a > span {
+    font-size: 19px;
+}
+
+.paraGraph {
+    margin-top: 36px;
+    margin-right: 5px;
+    text-align: justify;
+    color: rgb(255,255,255);
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+/* share zoro */
+#share-zoro{
+    height: 80px;
+    width: 100%;
+    margin-top: 0px;
+    padding-top: 3px;
+    padding-bottom: 7px;
+}
+
+/* share zoro left border */
+#share-zoro >div {
+    margin-top: 40px;
+    border-color: #cae962;
+    border-style: solid;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    margin-left: 15px;
+}
+/* share zoro element */
+#share-zoro >div > h3{
+    color: #cae962;
+    margin-left: 18px;
+    margin-bottom: 0px;
+    font-size: 17px;
+}
+/* to your friends */
+#share-zoro > div > h5{
+    margin: 5px 30px 5px 19px;     /* 
+    top , right , bottom , left*/
+    color: rgb(255,255,255);
+}
+
+/* Right side distinct container */
+#content-right-container{
+    position: relative;
+    height: 18.4cm;
+    width: auto;
+    color: rgb(0, 0, 0);
+    background-color: rgba(0,0,0,0.4);
+    margin-left: 75.1%;
+    padding-top: 100px;
+    padding-left: 20px;
+}
+
+#content-right-container  > p {
+    color: rgb(255,255,255);
+}
+
+#main-container {
+    margin-top: 18.6cm;
+    position:absolute;
+    background-color: rgb(0,0,0);
+}
+
+/*  Most Viewed exclude from Right container */
+#main-container > h3 {
+    visibility: visible;
+    color: rgb(255,255,255);
+    margin-left: 76%;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: #cae962;
+    position: absolute;
+}
+
+/* Right Side container start from here */
+#right-container {
+    visibility: visible;
+    margin-left: 76%;
+    width: 8cm;
+    padding-top: 100px;
+}
+
+/* Today / Week / Month */
+#right-container > #time  {
+    display: flex;
+    flex-shrink: 0;
+    height: 50px;
+    justify-content: space-around;
+    background-color: rgba(255,255,255,0.20);
+    border-radius: 6px 6px 0px 0px;
+}
+
+#right-container > #time > h5 > a {
+    text-decoration: none;
+    color: rgba(255,255,255,1);
+   margin-top: 0%;
+   font-size: 15px;
+
+}
+
+#right-container > #time > h5  > a:hover{
+    color: #cae962;
+    
+}
+
+#right-container > #time > h5{
+    background-color: rgba(255,255,255,0.1);
+    padding-top: 20px;
+    width: 87px;
+    height: 60%;
+    margin-top: 0%;
+    padding-left: 10%;
+}
+
+#right-container > #time > h5:hover{
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* For today-section elements */
+.today-section{
+    display: flex;
+    height: 90px;
+    margin-bottom: 20px;
+    background-color: rgba(255,255,255,0.10);
+    border-color: rgba(0,0,0,0.20);
+    border-style: solid;
+    border-right: none;
+    border-left:  none;
+    border-top: none;
+    margin-bottom: 0px;
+}
+/* Section Number element */
+.today-section > h3 {
+    margin-right: 9px;
+    margin-left: 15px;
+    height: 30px;
+    border-style: solid;
+    border-color: #cae962;
+    color: rgba(255,255,255,1);
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    cursor: none
+}
+
+.today-section > h3:hover {
+    visibility: collapse;
+}
+
+/* Section of image */
+.today-section > img {
+    height: 70px;
+    margin: 10px;
+    text-align: justify;
+}
+.today-section > div {
+    margin-top: 20px;
+    width: fit-content;
+  }
+  
+/* Section for Name of content */
+.today-section > div > a {
+    color: rgb(255,255,255);
+    text-decoration: none;
+    font-size: 15px;
+    margin-bottom: 5px;
+    position: relative;
+    font-weight: 700;
+}
+
+.today-section > div > a:hover {
+    color: #cae962;
+}
+
+/* views & reactions */
+.today-section > div > div  {
+    display: flex;
+}
+.today-section > div > div > h5 {
+    margin-top: 6px;
+    color: rgba(255,255,255,0.5);
+    margin-right: 10px;
+    margin-left: 5px;
+}
+/* 1st Right Section Element section end here */
+
+
+
+
+
+/* left Side container start from here */
+#left-container {
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    width: 74.3%;
+    margin-left: 20px;
+}
+/* Movie Anime */
+#left-container > h4{
+    margin-left: 20px;
+    width: fit-content;
+    font-size:25px;
+    color: #cae962;
+    position: relative;
+    width: 100%;
+}
+/* For First big four tiles */
+
+.big-four-tile{
+    margin-top: 10px;
+    margin-left: 4px;
+    margin-right: 8px;
+    background-color: rgba(255,255,255,0.10);
+    width: 6.1cm;
+    height: 10.4cm;
+    justify-content: center;
+}
+/* For Images */
+.big-four-tile > img {
+    height: 250px;
+    width: 230px;
+    color: aliceblue;
+}
+
+/* For Play button  Using <a> tag */
+.play {
+    position: absolute;
+    color: rgba(255,255,255,1);
+    padding-top: 70px;
+    text-align: center;
+    opacity: 0; 
+    height: 180px;
+    width: 230px;
+    /* this property takes linear-gradient( x+ , x- ) axis */
+    background: linear-gradient(rgba(214, 214, 214,0.3), rgb(0,0,0,0.5));
+}
+/* play button effect */
+.play:hover {
+   opacity: 1;
+   background-color: rgba(0,0,0,0.5);
+}
+
+/* For sub/Dub & Episode */
+.big-four-tile > h5 {
+    margin-top: 230px;
+    margin-bottom: 0%;
+}
+/* Only sub/Dub */
+.sub-dub{
+    position: absolute;
+    background-color: rgb(246, 236, 236);
+    color: rgb(0, 0, 0);
+    margin-left: 10px;
+}
+/* for Episode */
+.ep {
+    position: absolute;
+    background-color: rgb(127, 255, 212);
+    margin-left: 180px;
+}
+
+/* Content heading h4 */
+.big-four-tile > h4 {
+    margin-top: 7px;
+    margin-left: 8px;
+}
+.big-four-tile > h4 > a {
+    word-break: break-word;
+    margin-top: 0%;
+    color: rgb(255,255,255);
+    text-decoration: none;
+    font-size: 15px;
+}
+.big-four-tile > h4 > a:hover {
+    color: #cae962;
+}
+/* After Heading => passage */
+.big-four-tile > h4 >  p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+}
+
+.big-four-tile > h4 > strong  {
+   color: rgba(255,255,255,0.5);
+   font-size: 12px;
+   margin-left: 5px;
+}
+
+
+/* #footer {
+    margin-top: 16cm;
+} */

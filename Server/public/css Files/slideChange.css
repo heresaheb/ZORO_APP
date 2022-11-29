@@ -1,0 +1,266 @@
+* { 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+ body{
+    overflow-x: hidden;
+}
+
+#main {
+    margin-top: 18.6cm;
+    position: absolute;
+    height: 10cm;
+    width: 100%;
+    color: white;
+    font-weight: 500;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#main-sub-container{
+    top: -17cm;
+    background: border-box;
+    width: fit-content;
+    position: absolute;
+    display: flex;
+    flex-direction: row-reverse;
+    animation-name: slide-in;
+    animation-timing-function: cubic-bezier(0, 1, 0.222, 1);
+    animation-delay: 1.6s;
+    animation-fill-mode: both;
+    animation-duration: 4.9s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slide-in {
+
+    0%{
+        right: -147cm;
+    }
+
+    25%{
+        right: -108.6cm;
+    }
+
+    50%{
+        right: -72.6cm;
+    }
+
+    75%{
+        right: -36.2cm;
+    }
+
+    100% {
+        right: -0.2cm;
+    }
+}
+
+@keyframes slide-in-for-big-screen {
+
+    0%{
+        right: -155cm;
+    }
+
+    25%{
+        right: -114.7cm;
+    }
+
+    50%{
+        right: -76.7cm;
+    }
+
+    75%{
+        right: -38.2cm;
+    }
+
+    100% {
+        right: -0.2cm;
+    }
+}
+
+.inside > div > button >a{
+    text-decoration: none;
+    color: #09090a;
+}
+
+
+.inside > div > h2{
+    color: greenyellow;
+    margin-top: 2cm;
+    margin-left: 3em;
+}
+
+.heading {
+    font-size: 60px;
+    margin: 0%;
+    margin-left: 0.5em;
+}
+
+.heading , .paragraph{
+    text-align: justify;
+    word-spacing: 5px;
+}
+
+.paragraph {
+    margin-left: 1em;
+    /* text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; */
+}
+
+
+.u-list > li >h5{
+    margin-left: 1em;
+    color: white;
+}
+
+.sub-container > img {
+    height: 100%;
+}
+
+.inside > div > button{
+    margin-left: 40px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-size: 16px;
+    background-color: greenyellow;
+    color: #09090a;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.inside > div > button:hover{
+    background-color: white;
+}
+
+/* (FILO) => Slide Structures -> Fast in last out in STACK.*/
+
+.sub-container{
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.inside{
+    background: linear-gradient(14deg , rgba(0, 0, 0, 1),rgba(244, 245, 247, 0.2));
+    height: 15cm;
+    width: 36.2cm;
+    padding-top: 0.1cm ;
+    /* opacity: .6; */
+}
+
+@media screen and (min-width : 1367px) {
+
+    #trends > h1{
+        margin-top: 1cm;
+    }
+
+    #but-for-scroll{
+    top: 19.4cm;
+    height: 6cm;
+    }
+
+    #main {
+        height: 8cm;
+    }
+
+   .inside{
+    height: 17cm;
+    width: 38.2cm;
+   }
+
+   #main-sub-container{
+    animation-name:slide-in-for-big-screen;
+    animation-delay: 2s;
+    animation-duration: 4.5s;
+   }
+}
+
+.inside > div{
+    margin: 10px;
+    word-break: keep-all;
+    width: 20cm;
+}
+
+.inside > div > ul {
+    list-style: none;
+    display: flex;
+}
+
+.inside > div > ul >li{
+    margin-right: 8px;
+}
+
+.inside > div > ul >li > h5{
+    margin-top: 0px ;
+    padding: 2px;
+    background-color: aliceblue;
+    color: #09090a;
+    margin-right: 8px;
+    border-radius: 2px;
+}
+
+
+@media screen and (max-width : 425px) {
+    #main {
+        height: 5cm;
+    }
+
+    .inside > div{
+        width: 6cm;
+    }
+
+    .heading , h2 {
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+    h2{
+        font-size: 10px;
+    }
+
+    .heading{
+        font-size: 15px;
+    }
+
+
+    .paragraph{
+        margin-top: -15px;
+        font-size: 7px;
+    }
+
+
+    .inside > div > ul{
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+
+    .inside > div > ul >li{
+        margin-right: 5px;
+        font-size: 7px;
+    }
+
+    .inside > div > ul >li > h5{
+        font-size: 5px;
+        padding: 1px;
+    }
+
+    button{
+        font-size: 7px;
+        padding: 3px;
+        margin: 5px;
+        border: none;
+    }
+}
+
+#change-slide-btn{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-top: -4cm;
+    right: 1cm;
+}
+
+#change-prev , #change-next {
+    padding: 13px 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+}

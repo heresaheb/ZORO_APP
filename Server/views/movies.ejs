@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome to free movies online</title>
+    <link rel="stylesheet" href="../css Files/movies.css">
+    <link rel="stylesheet" href="../css Files/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css Files/nav-bar-slide-bar.css">
+</head>
+<body>
+
+    <div id="Background-cover-for-nav-bar"></div>
+    
+    <div id="nav-side-bar-movies"></div>
+
+    <div id="nav-bar">
+        <button id="nav-button">
+            <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+        </button>
+
+        <a href="/"><img src="../Images/logo.png" alt="Home Page Logo"></a>
+
+        <form action="/search" autocapitalize="off">
+            
+            <input type="text" id="search-box" placeholder="Serach Anime...">
+        <div>
+            <a href="/search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </a>
+            
+        </div>
+
+        <button><a href="/filter">Filter</a></button>
+
+        </form>
+
+
+        <div class="social-section">
+            <a href="www.telegram.com">
+
+            <img src="../Images/additional icons/icons8-telegram-app-48.png" alt="telegram-icon">
+        </a>
+        </div>
+
+        <!-- <div class="social-section" id="discord">
+            <a href="www.discord.com">
+            <img src="../Images/additional icons/icons8-discord-bubble-64.png" alt="discord-icon">
+        </a>
+        </div> -->
+
+        <div class="social-section">
+            <a href="www.twitter.com">
+            <img src="../Images/additional icons/icons8-twitter-circled-48.png" alt="twitter-icon">
+        </a>
+        </div>
+
+
+        <div class="social-section"> <img src="../Images/movies/live.svg" alt="Live Logo" >
+            <br>
+            <a href="e">Watch2gether</a>
+         </div>
+
+    <button id="random"><i class="fa fa-random fa-2x" aria-hidden="true"></i> 
+        <br>
+        <a href="e">random</a>
+    </button>
+
+    <div id="donate"><a href="e">Donate</a></div>
+
+    <div id="login">
+        <a href="e">Login</a>
+    </div>
+
+    </div>
+    
+    <div id="share-zoro">
+        <div>
+            <h3>Share Zoro </h3>
+               <h5>to your friends   </h5>
+            </div>
+    </div>
+
+        <!-- Incomplete -->
+
+<div id="main-container">
+    <div id="left-container">
+        <h4 id="movie-anime">Movie Anime</h4>
+
+<!-- For Movie Anime -->
+<% for (let i = 01; i < AnimeData.length; i++) { %>
+        <div>
+            <div class="big-four-tile" id="first-left-tile">
+                <h5 class="sub-dub">SUB</h5>
+                <h5 class="ep">Ep Full</h5>
+        
+                <a class="play" href="/movies/contentPage?id=<%= AnimeData[i].id  %>">
+                    <i class="fa fa-play fa-4x" aria-hidden="true"></i>
+                </a>
+        
+                <img src="../Images/movies/Top-4/<%= AnimeData[i].Image_Path %> "
+                 alt= "<%= AnimeData[i].Image_Path  %>" >
+        
+                    <!-- id -1 for decrese the value and label according to index -->
+                    <h4><a href="/movies/contentPage?id=<%= AnimeData[i].id  %>">
+                        <%= AnimeData[i].Anime_Name %> </a>
+                           
+                        <% if(AnimeData[i].Anime_Desc != "null") { %>
+                            <div class="description">  <%=  AnimeData[i].Anime_Desc %> </div> 
+                        <% } else{ %>
+
+                            <div class="description">  Not Available </div> 
+                            <% } %> 
+        
+                    <div class="duration">
+                        <strong> Movie  * <%= AnimeData[i].Anime_Time %> m </strong>   
+                    </div>              
+                    
+                    </h4>
+            </div>
+        </div>
+
+    <% }  %> 
+
+    </div>
+    
+<!-- For Movie Anime section end here-->
+
+    <h3>Most Viewed</h3>
+
+
+    <div id="right-container">
+
+         <div id="time">
+           <h5> <a href="www.google.com">Today </a>
+            </h5>
+            <h5> <a href="e">Week</a>
+            </h5>
+            <h5> <a href="e">Month </a>
+            </h5>
+         </div>
+
+
+    <div class="today-section">
+
+            <h3>01</h3>
+
+            <img src="../Images/movies/today-section-images/img03.jpg" alt="No1 img">
+
+    <div>
+                <a href="e">One Piece</a>
+           
+            <div>
+                <h5>
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                58,658</h5>
+                
+                    <h5>
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    144,635</h5>
+
+                </div>
+
+    </div>
+                
+         </div>
+
+         <div class="today-section">
+
+            <h3>02</h3>
+
+            <img src="../Images/movies/today-section-images/img01.jpg" alt="No1 img">
+
+    <div>
+                <a href="e">One Piece</a>
+           
+            <div>
+                <h5>
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                58,658</h5>
+                
+                    <h5>
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    144,635</h5>
+
+                </div>
+
+    </div>
+                
+         </div>
+
+ <div class="today-section">
+
+            <h3>03</h3>
+
+            <img src="../Images/movies/today-section-images/img02.jpg" alt="No1 img">
+
+        <div>
+                <a href="e">Naruto</a>
+           
+            <div>
+                <h5>
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                58,658</h5>
+                
+                    <h5>
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    144,635</h5>
+
+                </div>
+
+         </div>
+                
+</div>
+
+         
+         <div class="today-section">
+
+            <h3>04</h3>
+
+            <img src="../Images/movies/today-section-images/img04.png" alt="No1 img">
+
+    <div>
+                <a href="e">Classroom of the Elite 2nd Season</a>
+           
+            <div>
+                <h5>
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                58,658</h5>
+                
+                    <h5>
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    144,635</h5>
+
+                </div>
+
+    </div>
+                
+         </div>
+
+
+         <h3>Genres</h3>
+
+
+         <div id="right-side-sec-container">
+
+        <div>
+            <h5><a href="e" class="green-color">Action</a></h5>
+            <h5><a href="e" class="sky-color">Harem</a></h5>
+            <h5><a href="e" class="violet-color">Cars</a></h5>
+            <h5><a href="e" class="orange-color">comedy</a></h5>
+        </div>
+        
+        <div>
+            <h5><a href="e" class="sky-color">Adventure</a></h5>
+            <h5><a href="e" class="green-color">Action</a></h5>
+            <h5><a href="e"class="orange-color">Action</a></h5>
+            <h5><a href="e" class="violet-color">Action</a></h5>
+        </div>
+        <div>
+            <h5><a href="e" class="violet-color">Demons</a></h5>
+            <h5><a href="e" class="green-color">Action</a></h5>
+            <h5><a href="e" class="sky-color">Action</a></h5>
+            <h5><a href="e" class="orange-color">Action</a></h5>
+        </div>
+
+                 
+        <h4 id="right-sec-read-more">
+            <a href="e">Read More</a>
+        </h4>
+
+
+         </div>   <!-- Right-side 2nd container end here -->
+
+
+
+    </div>
+    <!-- Right container main end here -->
+
+</div>
+    <!-- Main container end here -->
+
+
+    <script type="module" src="../ScriptFile/movies.js"></script>
+</body>
+</html>

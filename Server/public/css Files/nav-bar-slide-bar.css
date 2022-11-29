@@ -1,0 +1,220 @@
+body{
+    /* background-color: #62626b; */
+    margin: 0%;
+}
+
+#Background-cover-for-nav-bar{
+    position: absolute;
+    background-color: rgba(0, 0, 0,0.5);
+    padding-top: 100%;
+    padding-left: 100%;
+}
+
+.positon-nav-bar{
+    margin-bottom: 96%;
+}
+
+@keyframes navBarAnimationForMobile {
+    0%{
+        height:50px;
+    }
+
+
+    100%{
+        height: 406px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    div #nav-side-bar{
+    position: absolute;
+     animation-name:navBarAnimationForMobile;
+    height: 406px;
+    margin-top: -4.5cm; 
+    padding-left: 38px;
+    margin-left: -30px;
+    width: 4cm;
+    }
+
+    #left-side-small-container > div > h5{
+        padding-top: 6px;
+    }
+
+    #left-side-small-container > div > h5 >a {
+         font-size: 8px;
+        font-weight: 100;
+    }
+
+    div #left-side-small-container {
+        margin-left:  -12px;
+        width: 4cm;
+    }
+    div #nav-side-bar > a {
+        font-size: 13px;
+    }
+
+    div #community > a {
+    font-size: 13px;
+    }
+
+    div #nav-side-bar > button:first-child {
+        border: none;
+        font-size: 13px;
+        height: 19px;
+    }
+
+
+
+}
+
+
+#nav-side-bar{
+    position: fixed;
+    margin-top: 4.2cm;
+    background-color: rgb(19, 20, 21);
+    display: flex;
+    flex-direction: column;
+    width: 6.3cm;
+    padding-left: 6px;
+    padding-top: 20px;
+    animation-name:navBarAnimation;
+    animation-duration: 0.6s;
+    /* After animation height will increase to fix */
+    height: 475px; 
+    z-index: 1;  /*hide overflow overlap elements*/
+}
+
+@keyframes navBarAnimation {
+    0%{
+        height:50px;
+    }
+
+
+    100%{
+        height: 473px;
+    }
+}
+
+
+/* Close menu */
+#nav-side-bar > button:first-child {
+    background-color: rgb(237, 20, 20);
+    margin-bottom: 20px;
+    height: 30px;
+    width: fit-content;
+    font-size: 17px;
+    font-weight: 600;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+#nav-side-bar > button:first-child:hover{
+    background-color: rgba(255,255,255,0.7);
+    cursor: pointer;
+}
+
+/* Only for community */
+
+#community:hover {
+    background-color: rgb(227, 227, 14);
+    cursor: pointer;
+    color: rgba(19, 14, 14, 0.7);
+}
+#community > a{
+    color: rgb(30, 17, 208);
+    text-decoration: none;
+    margin-bottom: 20px;
+    height: 30px;
+    width: fit-content;
+    font-size: 17px;
+    font-weight: 600;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+/* List items */
+#nav-side-bar > a {
+    color: #cae962;
+    /* color: rgb(208, 208, 208); */
+    text-decoration: none;
+    padding-top: 4px ;
+    padding-bottom: 10px;
+    font-size: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+ #nav-side-bar >a:hover{
+    color: #e6e6e6;
+    cursor: pointer;
+}
+#nav-side-bar > h3{
+    color: rgb(255,255,255);
+}
+
+
+
+
+/* Genres */
+#genre{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: medium;
+}
+
+
+/* Styling inside each box-elements */
+#left-side-small-container{
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    width:  5cm;
+    margin-top: 0%;
+}
+
+
+#left-side-small-container > div > h5 {
+    height: 15px;
+    margin-top: 0%;
+    margin-right: 12px;
+    padding-top: 10px;
+    margin-bottom: 0%;
+    border-radius: 6px;
+    width:10px;
+    
+}
+
+#grid > h5> a:hover {
+    cursor: pointer;
+        color: #cae962;
+        background-color: rgba(255,255,255,0.10);
+}
+
+#left-side-small-container > div > h5 >a {
+    text-decoration: none;
+    font-size: 10px;
+}
+
+#left-side-small-container > div > h5 > a:hover{
+    color: #cae962;
+    background-color: unset;
+}
+
+/* Color For Generes */
+.green-color{
+    color: #28e17f;
+}
+
+.sky-color{
+    color: rgb(125, 212, 246);
+}
+
+.violet-color {
+    color: rgb(226, 162, 226);
+}
+
+.orange-color{
+    color: rgb(249, 90, 33);
+}
+

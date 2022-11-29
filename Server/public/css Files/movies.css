@@ -1,0 +1,586 @@
+* { 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* target all anchor / link elemets */
+a:hover{
+    color: #cae962;
+    cursor: pointer;
+}
+
+body{
+    position:absolute;
+    /* height:100%;
+    width:100%; */
+    margin: 0%;
+    background-color: rgba(0,0,0,1);
+}
+
+#nav-bar{
+    background-color: rgba(0,0,0,0.6);
+    height: 70px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    z-index:1;
+}
+/* nav-bar 1st button */
+#nav-bar > button:first-child{
+    height: fit-content;
+    margin-top: 15px;
+    margin-left: 8px;
+    margin-right: 0px;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.1);
+}
+
+#nav-bar > button:first-child > i {
+    color: rgb(255,255,255);
+}
+
+#nav-bar > button:first-child:hover{
+    border-color: #cae962;
+}
+
+/* For page logo */
+#nav-bar > a > img {
+    height: 50px;
+    margin-left: 40px;
+    margin-right: 25px;
+    margin-top: 10px;
+}
+/* Whole search content */
+#nav-bar > form {
+    position: relative;
+    margin-right: 25px;
+}
+
+/* this inside input tag present */
+#nav-bar > form > div {
+    /* position: absolute;  */
+    float: right;
+    margin-left: 250px; 
+    display: flex;
+    flex-direction: row;
+}
+
+/* For input box */
+#nav-bar > form >  input {
+    position: absolute;
+    width: 300px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+/* Filter Button */
+#nav-bar > form > button {
+    float: right;
+    position: absolute;
+    margin-left: 270px;
+    margin-top: 20px;
+    text-decoration: none;
+    background-color:  rgba(0,0,0,0.7);
+}
+
+#nav-bar > form > button:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* inside filter button */
+#nav-bar > form > button > a {
+    text-decoration: none;
+    color: rgb(255,255,255);
+}
+
+
+/* Search Icon */
+#nav-bar > form > div > a {
+    position: absolute;
+    margin-top: 20px;
+    color: black;
+}
+/* For after input section */
+.social-section{
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+/* For Telegram option */
+
+#nav-bar > .social-section > a > img[src$="telegram-app-48.png"] {
+   margin-left: 75px;
+}
+
+#nav-bar > .social-section > a > img[src$="icons8-discord-bubble-64.png"] {
+   height: 20px;
+   margin-top: 9px;
+   margin-left: 8px;
+ }
+
+ #discord{
+    background-color: rgba(255,255,255,0.96);
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    margin-top: 15px;
+ }
+/* live Icon */
+.social-section > img[src $="live.svg" ] {
+    height: 27px;
+    margin-left: 38px;
+    margin-top: 3px;
+
+}
+
+#nav-bar > .social-section > a {
+    color: rgb(255,255,255);
+    font-size: 13px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+#nav-bar > .social-section > a:hover{
+    color: #cae962;
+}
+
+/* nav-bar Random button */
+#nav-bar > #random {
+background-color: rgba(0,0,0,0.01);
+margin-left: 8px;
+margin-top: 17px;
+margin-bottom: 13px;
+}
+
+#nav-bar > #random {
+    border: none;
+}
+
+#nav-bar > button > i{
+    color:#cae962;
+}
+
+#nav-bar > button > a {
+    text-decoration: none;
+    color: rgb(255,255,255);
+}
+
+#nav-bar > button > a:hover {
+    color: #cae962;
+}
+
+/* Donate Button Only */
+#donate{
+    margin-right: 50px;
+    margin-left: 70px;
+    background-color: rgb(12, 255, 121);
+    border-radius: 60px;
+    width: 70px;
+    height: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding-left: 14px;
+    text-align: center;
+    padding-top: 10px;
+    padding-right: 14px;
+}
+/* Inside Donate button */
+ #donate > a {
+    text-decoration: none;
+    font-size: medium;
+    font-size: large;
+    color: rgb(0,0,0);
+    font-weight: 500;
+}
+
+#donate > a:hover{
+    color: rgb(255,255,255);
+}
+
+/* For login button only */
+ #login{
+    margin-left: 90px;
+    background-color: green;
+    text-align: center;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    margin-top: 8px;
+    margin-bottom: 8px ;
+    float: right;
+}
+/* Inside login button */
+#nav-bar > #login > a {
+    margin: 10px;
+    color: rgb(255,255,255);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#nav-bar > #login > a:hover{
+    color: rgb(0,0,0);
+}
+
+
+/*  Nav-Bar All Elements End Here */
+
+
+/* share zoro */
+#share-zoro{
+    margin-top: 1.8cm;
+    height: 80px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+    padding-top: 3px;
+    padding-bottom: 7px;
+}
+
+/* share zoro left border */
+#share-zoro >div {
+    border-color: #cae962;
+    border-style: solid;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    margin-left: 15px;
+}
+/* share zoro element */
+#share-zoro >div > h3{
+
+    /* padding-top: 15px; */
+    color: #cae962;
+    margin-left: 18px;
+    margin-bottom: 0px;
+    font-size: 17px;
+}
+/* to your friends */
+#share-zoro >div > h5{
+    margin: 5px 30px 5px 19px;     /* 
+    top , right , bottom , left*/
+    color: rgb(255,255,255);
+}
+
+/* After share Zoro Whole Container */
+
+/* #main-container {
+} */
+
+/*  Most Viewed exclude from Right container */
+#main-container > h3 {
+    color: rgb(255,255,255);
+    margin-left: 76%;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: #cae962;
+    position: absolute;
+
+}
+
+/* Right Side container start from here */
+#right-container {
+    margin-left: 76%;
+    width: 8cm;
+    padding-top: 100px;
+}
+
+/* Today / Week / Month */
+#right-container > #time  {
+    display: flex;
+    flex-shrink: 0;
+    height: 50px;
+    justify-content: space-around;
+    background-color: rgba(255,255,255,0.20);
+    border-radius: 6px 6px 0px 0px;
+    /* padding-left: 20px;
+    padding-right: 20px; */
+}
+
+#right-container > #time > h5 > a {
+    text-decoration: none;
+    color: rgba(255,255,255,1);
+   margin-top: 0%;
+   font-size: 15px;
+
+}
+
+#right-container > #time > h5  > a:hover{
+    color: #cae962;
+    
+}
+
+#right-container > #time > h5{
+    background-color: rgba(255,255,255,0.1);
+    padding-top: 20px;
+    width: 87px;
+    height: 60%;
+    margin-top: 0%;
+    padding-left: 10%;
+}
+
+#right-container > #time > h5:hover{
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* For today-section elements */
+.today-section{
+    display: flex;
+    height: 90px;
+    margin-bottom: 20px;
+    background-color: rgba(255,255,255,0.10);
+    border-color: rgba(0,0,0,0.20);
+    border-style: solid;
+    border-right: none;
+    border-left:  none;
+    border-top: none;
+    margin-bottom: 0px;
+}
+/* Section Number element */
+.today-section > h3 {
+    margin-right: 9px;
+    margin-left: 15px;
+    height: 30px;
+    border-style: solid;
+    border-color: #cae962;
+    color: rgba(255,255,255,1);
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    cursor: none
+}
+
+.today-section > h3:hover {
+    visibility: collapse;
+}
+
+/* Section of image */
+.today-section > img {
+    height: 70px;
+    margin: 10px;
+    text-align: justify;
+}
+.today-section > div {
+    margin-top: 20px;
+    width: fit-content;
+  }
+  
+/* Section for Name of content */
+.today-section > div > a {
+    color: rgb(255,255,255);
+    text-decoration: none;
+    font-size: 15px;
+    margin-bottom: 5px;
+    position: relative;
+    font-weight: 700;
+}
+
+.today-section > div > a:hover {
+    color: #cae962;
+}
+
+/* views & reactions */
+.today-section > div > div  {
+    display: flex;
+}
+.today-section > div > div > h5 {
+    margin-top: 6px;
+    color: rgba(255,255,255,0.5);
+    margin-right: 10px;
+    margin-left: 5px;
+}
+/* 1st Right Section Element section end here */
+
+/* Genres */
+#right-container > h3 {
+    color: #cae962;     /* every elemets color comes from here*/
+    font-weight: 600;
+    font-size: 22px;
+}
+/* Styling inside each box-elements */
+#right-side-sec-container{
+    background-color: rgba(0,0,0,0.3);
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    width: 300px;
+}
+
+
+#right-side-sec-container > div > h5 {
+    height: 30px;
+    margin-top: 0%;
+    margin-right: 0%;
+    padding-top: 10px;
+    margin-bottom: 0%;
+    border-radius: 6px;
+    width: fit-content;
+
+    /* margin-left: 0.6px;    
+    margin-bottom: 0.6px;*/
+                         /* Inside gride style  */
+    
+}
+
+#right-side-sec-container > div > h5:hover {
+        background-color: rgba(255,255,255,0.10);
+}
+
+#right-side-sec-container > div > h5 >a {
+    text-decoration: none;
+    /* color: #cae962; */
+    font-size: 15px;
+}
+
+/* Color For Generes */
+.green-color{
+    color: #28e17f;
+}
+
+.sky-color{
+    color: rgb(125, 212, 246);
+}
+
+.violet-color {
+    color: rgb(226, 162, 226);
+}
+
+.orange-color{
+    color: rgb(249, 90, 33);
+}
+
+/* Read More */
+#right-sec-read-more {
+    height: 30px;
+    width: 90%;
+    border-radius: 5px;
+    margin-left: 20px;
+    background-color: rgba(255,255,255,0.2);
+    text-align: center;
+    padding-top: 10px;
+}
+
+#right-sec-read-more > a {
+    text-decoration: none;
+    color: rgb(255,255,255);
+}
+
+
+
+
+
+
+/* left Side container start from here */
+#left-container {
+    float: left;
+   display: flex;
+   flex-wrap: wrap;
+   width: 74.3%;
+   margin-left: 20px;
+}
+/* Movie Anime */
+#left-container > h4{
+    margin-left: 20px;
+    width: fit-content;
+    font-size:25px;
+    color: #cae962;
+    position: relative;
+    width: 100%;
+}
+/* For First big four tiles */
+
+.big-four-tile{
+    margin-top: 10px;
+    margin-left: 4px;
+    margin-right: 8px;
+    background-color: rgba(255,255,255,0.10);
+    width: 6.1cm;
+    height: 10.4cm;
+    justify-content: center;
+}
+/* For Images */
+.big-four-tile > img {
+    height: 250px;
+    width: 230px;
+    color: aliceblue;
+}
+
+/* For Play button  Using <a> tag */
+.play {
+    /* width: 40px; */
+    position: absolute;
+    color: rgba(255,255,255,1);
+    padding-top: 70px;
+    text-align: center;
+    opacity: 0; 
+    height: 180px;
+    width: 230px;
+    /* this property takes linear-gradient( x+ , x- ) axis */
+    background: linear-gradient(rgba(214, 214, 214,0.3), rgb(0,0,0,0.5));
+}
+/* play button effect */
+.play:hover {
+   opacity: 1;
+   background-color: rgba(0,0,0,0.5);
+}
+
+/* For sub/Dub & Episode */
+.big-four-tile > h5 {
+    margin-top: 230px;
+    margin-bottom: 0%;
+}
+/* Only sub/Dub */
+.sub-dub{
+    position: absolute;
+    background-color: rgb(246, 236, 236);
+    color: rgb(0, 0, 0);
+    margin-left: 10px;
+}
+/* for Episode */
+.ep {
+    position: absolute;
+    background-color: rgb(127, 255, 212);
+    margin-left: 180px;
+}
+
+/* Content heading h4 */
+.big-four-tile > h4 {
+    margin-top: 7px;
+    margin-left: 8px;
+}
+.big-four-tile > h4 > a {
+    margin-top: 0%;
+    margin-bottom: 0%;
+    color: rgb(255,255,255);
+    text-decoration: none;
+    font-size: 15px;
+}
+.big-four-tile > h4 > a:hover {
+    color: #cae962;
+}
+/* After Heading => passage */
+
+.big-four-tile > h4 >.description {
+    margin-top: 10px;
+    /* text-overflow: ellipsis;
+    white-space: nowrap; */
+    overflow: hidden;
+    height: 41px;
+    padding-right: 2px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+}
+
+.big-four-tile > h4 > .duration{
+    margin-top: 20px;
+}
+
+.big-four-tile > h4 > div > strong  {
+   color: rgba(255,255,255,0.5);
+   font-size: 12px;
+   margin-left: 5px;
+}
+

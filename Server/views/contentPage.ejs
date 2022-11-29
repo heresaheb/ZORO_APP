@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= TargetAnime.Anime_Name %></title>
+    <link rel="stylesheet" href="../css Files/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../css Files/contentPage.css">
+
+    <link rel="stylesheet" href="../css Files/nav-bar-slide-bar.css">
+</head>
+<body>
+    <!-- <div id="Background-cover-for-nav-bar"></div>
+    
+    <div id="nav-side-bar-movies"></div> -->
+
+    <div id="nav-bar">
+        <button id="nav-button">
+            <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+        </button>
+
+        <a href="/"><img src="../Images/logo.png" alt="Home Page Logo"></a>
+
+        <form action="/search" autocapitalize="off">
+            
+            <input type="text" id="search-box" placeholder="Serach Anime...">
+        <div>
+            <a href="/search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </a>
+            
+        </div>
+
+        <button class="hide-for-pc"><a href="/filter">Filter</a></button>
+
+        </form>
+
+
+        <div class="social-section">
+            <a href="www.telegram.com">
+
+            <img src="../Images/additional icons/icons8-telegram-app-48.png" alt="telegram-icon">
+        </a>
+        </div>
+
+        <div class="social-section" id="discord">
+            <a href="www.discord.com">
+            <img src="../Images/additional icons/icons8-discord-bubble-64.png" alt="discord-icon">
+        </a>
+        </div>
+
+        <div class="social-section">
+            <a href="www.twitter.com">
+            <img src="../Images/additional icons/icons8-twitter-circled-48.png" alt="twitter-icon">
+        </a>
+        </div>
+
+
+        <div class="social-section"> <img src="../Images/movies/live.svg" alt="Live Logo" >
+            <br>
+            <a href="e">Watch2gether</a>
+         </div>
+
+    <button id="random" class="hide-for-pc"><i class="fa fa-random fa-2x" aria-hidden="true"></i> 
+        <br>
+        <a href="e" class="hide-for-pc">random</a>
+    </button>
+
+    <div id="donate" class="hide-for-pc"><a href="e">Donate</a></div>
+
+    <div id="login">
+        <a href="e">Login</a>
+    </div>
+
+    </div>
+
+    <div id="content-cover">
+        <img src="../Images/movies/Top-4/<%= AnimeData[TargetAnimeId].Image_Path %> "
+        alt= "<%= AnimeData[TargetAnimeId].Image_Path  %>" >
+    </div>
+
+
+    <div id="main-content">
+        <div id="left-container01">
+            <div id="content-image">
+                <img src="../Images/movies/Top-4/<%= AnimeData[TargetAnimeId].Image_Path %> "
+                alt= "<%= AnimeData[TargetAnimeId].Image_Path  %>" >
+            </div>
+
+            <div id="content-details">
+            <div>
+                <ul>
+                    <li>Home</li>
+                    <li>TV</li>
+                    <li><%= TargetAnime.Anime_Name %> </li>
+                </ul>
+            </div>
+
+                <h1><%= TargetAnime.Anime_Name %></h1>
+
+                <span class="type">HD</span>
+                <span class="type">SUB</span>
+                <div id="after-type">
+                    <ul>
+                        <li>TV</li>
+                        <li> EP <%= TargetAnime.Anime_Episodes %> </li>
+                        <li> <%= TargetAnime.Anime_Time %>m</li>
+                    </ul>
+                </div>
+
+                <button><a class="fa fa-play" href="/movies/watch?id=<%= TargetAnimeId  %>" aria-hidden="true"> <span>See Trailer</span>
+                </a></button>
+
+                <button><a class="fa fa-plus" aria-hidden="true"> <span>Add to list</span>
+                </a></button>
+
+                <div class="paraGraph" id="desciption">
+
+                    <% if(AnimeData[TargetAnimeId].Anime_Desc != "null") { %>
+                        <div class="paraGraph" id="desciption"> 
+                             <%= AnimeData[TargetAnimeId].Anime_Desc %> 
+                         </div> 
+
+                        <% } else{ %>
+
+                        <div class="paraGraph" id="desciption">  Not Available </div> 
+                        <% } %> 
+
+                </div>
+
+                <div class="paraGraph" id="para-use-hide">Zoro is the best site to watch <strong> <%= TargetAnime.Anime_Name %> </strong> SUB online, or you can even watch <strong> <%= TargetAnime.Anime_Name %> </strong>  DUB in HD quality. You can also find Project No.9 anime on Zoro website.</div>
+
+                <div id="share-zoro">
+                    <div>
+                        <h3>Share Anime </h3>
+                           <h5>to your friends   </h5>
+                        </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <div id="content-right-container">
+            <p >
+            <strong>Aired:: </strong><%= TargetAnime.Anime_Aired %>
+            </p>
+            <p>
+            <strong>Premiered: </strong>Summer2022
+            </p>
+
+            <p>
+                <strong>Duration: </strong><%= TargetAnime.Anime_Time %>m
+            </p>
+
+            <p>
+                <strong>Status: </strong><%= TargetAnime.Anime_Status %>
+            </p>
+
+            <!-- <hr> -->
+            <p id="genres">
+                <strong>Genres: </strong> <span class="type"><%= TargetAnime.Anime_Genres%></span>
+            </p>
+            <!-- <hr> -->
+    </div>
+
+    <div class="paraGraph" id="visble-for-mobile">
+        Zoro is the best site to watch <strong> <%= TargetAnime.Anime_Name %> </strong> SUB online, or you can even watch <strong> <%= TargetAnime.Anime_Name %> </strong>  DUB in HD quality. You can also find Project No.9 anime on Zoro website.
+    </div>
+
+    </div>
+
+
+        <div id="main-container">
+            <div id="left-container">
+                <h4 id="movie-anime">Recommended for you
+                </h4>
+        
+        <!-- For Top 4 Movie Anime -->
+        
+<!-- For Movie Anime -->
+
+<% for (let i = 07 ; i < AnimeData.length -6; i++) { %>
+            <div class="big-four-tile" id="first-left-tile">
+                <h5 class="sub-dub">SUB</h5>
+                <h5 class="ep">Ep Full</h5>
+        
+                <a class="play" href="/movies/contentPage?id=<%= AnimeData[i].id  %>">
+                    <i class="fa fa-play fa-4x" aria-hidden="true"></i>
+                </a>
+        
+                <img src="../Images/movies/Top-4/<%= AnimeData[i].Image_Path %> "
+                 alt= "<%= AnimeData[i].Image_Path  %>" >
+        
+        
+                    <h4><a href="/movies/contentPage?id=<%= AnimeData[i].id %>">
+                        <%= AnimeData[i].Anime_Name %> </a>
+                           
+                        <% if(AnimeData[i].Anime_Desc != "null") { %>
+                            <p>  <%=  AnimeData[i].Anime_Desc %> </p> 
+                        <% } else{ %>
+
+                            <p class="description">  Not Available </p> 
+                            <% } %> 
+        
+                    
+                        <strong> Movie  * <%= AnimeData[i].Anime_Time %> m </strong>               
+                    
+                    </h4>
+            </div>
+
+    <% }  %> 
+        
+            </div>
+            
+        <!-- For Top 4 Movie Anime section end here-->
+        
+            <h3 id="most-popular">Most Popular</h3>
+        
+        
+            <div id="right-container">
+        
+                 <div id="time">
+                   <h5> <a href="www.google.com">Today </a>
+                    </h5>
+                    <h5> <a href="e">Week</a>
+                    </h5>
+                    <h5> <a href="e">Month </a>
+                    </h5>
+                 </div>
+        
+     <% for (let i = 01; i < AnimeData.length -18; i++) { %>
+            <div class="today-section">
+        
+                    <h3>0<%= i %></h3>
+        
+                    <img src="../Images/movies/Top-4/<%= AnimeData[i].Image_Path %> " alt="<%= AnimeData[i].Image_Path  %>">
+        
+            <div>
+                        <a href="/movies/contentPage?id=<%= AnimeData[i].id %>">
+                            <%= AnimeData[i].Anime_Name %>
+                        </a>
+                   
+                    <div>
+                        <h5>
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                            <%= AnimeData[i].Views %></h5>
+                        
+                            <h5>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <%= AnimeData[i].Likes %>
+                            </h5>
+        
+                        </div>
+        
+            </div>
+                        
+                 </div>
+        
+            <% } %> 
+        
+            </div>
+            <!-- Right container main end here -->
+        
+    
+        </div>
+
+
+    <script type="module" src="../ScriptFile/contentPage.js"></script>
+</body>
+</html>
