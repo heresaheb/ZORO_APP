@@ -116,15 +116,15 @@ app.get("/" , (req, res)=>{
 */
 
 
-// app.listen(3000, (err)=>{
-//     if(!err)  { console.log("Server Listening On: 3000"); }
-
-//     else{console.log(err);}
-// });
-const hostname = '0.0.0.0';
-const port = 3000;
-app.listen(port, hostname, (err)=>{
-    if(!err)  { console.log(`Server Listening On: https://${hostname}:${port}/`); }
+app.listen(3000, (err)=>{
+    if(!err)  { console.log("Server Listening On: 3000"); }
 
     else{console.log(err);}
 });
+// const host = '0.0.0.0';
+// const port = 3000;
+// app.listen(port, host, (err)=>{
+//     if(!err)  { console.log(`Server Listening On: https://${host}:${port}/`); }
+
+//     else{console.log(err);}
+// });
