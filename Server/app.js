@@ -121,8 +121,10 @@ app.get("/" , (req, res)=>{
 
 //     else{console.log(err);}
 // });
-app.listen(3000,'0.0.0.0',(err)=>{
-    if(!err)  { console.log(`Server Listening On: https://${hostname}:${port}/`); }
+
+const PORT = process.env.PORT || 3030;
+app.listen(PORT, (err)=>{
+    if(!err)  { console.log(`Server Listening On: ${PORT}`); }
 
     else{console.log(err);}
 });
