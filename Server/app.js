@@ -62,12 +62,12 @@ const { hostname } = require('os');
 // });
 
 
-// app.get("/", (req, res)=>{
-//     res.render("root", {pageName: "Free Anime Streaming Online"}); 
-//     if(haveUpdate){
-//                 writeFileInAsync("./dataFromMysql.json", haveUpdate); //already file stored don't try to run this function otherwise you will lose data if you have no access to mysql data.
-//     } 
-// })
+app.get("/", (req, res)=>{
+    res.render("root", {pageName: "Free Anime Streaming Online"}); 
+    // if(haveUpdate){
+    //             writeFileInAsync("./dataFromMysql.json", haveUpdate); //already file stored don't try to run this function otherwise you will lose data if you have no access to mysql data.
+    // } 
+})
 
 app.get("/home"  , (req, res)=>{
     res.render("home" , { AnimeData : jsonData});
