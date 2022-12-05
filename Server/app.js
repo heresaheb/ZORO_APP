@@ -19,54 +19,54 @@ app.use(express.static("public"));
 let jsonData = require("./dataFromMysql.json"); //import the data where externally raw data exported.
 const { hostname } = require('os');
 
-// let con = mysql.createConnection({
-//     host: "localhost",
-//     user: "root",
-//     password: "pass1234",
-//     database:"dbfornodejs"
-// });
+let con = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "pass1234",
+    database:"dbfornodejs"
+});
 
-// con.connect((err)=>{
-//     if(!err){
-//         console.log("Database connection established!");
-//     }
-//     else{
-//         console.log(err);
-//     }
-// });
+con.connect((err)=>{
+    if(!err){
+        console.log("Database connection established!");
+    }
+    else{
+        console.log(err);
+    }
+});
 
-// // here only uses for write external data into internal file.
-//  function writeFileInAsync(path="", data) {
-//      let d = JSON.stringify(data); //convert in string
-//         //This line use for jsondata.js file only.
-//     fs.writeFile(path , d , (err, result)=>{
+// here only uses for write external data into internal file.
+ function writeFileInAsync(path="", data) {
+     let d = JSON.stringify(data); //convert in string
+        //This line use for jsondata.js file only.
+    fs.writeFile(path , d , (err, result)=>{
 
-//         if(!err){
-//             console.log("Data Written on following path.");
-//         }
-//         else  console.log("Error: Data Doesn't written on desire file location.");
-//     })
-//  }
+        if(!err){
+            console.log("Data Written on following path.");
+        }
+        else  console.log("Error: Data Doesn't written on desire file location.");
+    })
+ }
 
-// const getDataByQuery = "SELECT * FROM ZoroDb;";
-// let haveUpdate;
-// con.query(getDataByQuery, (err, result)=>{
-//     if(!err){
-//         haveUpdate = result;
-//          jsonData  = result;
-//         console.log("Data Imported Successfully From Mysql!");
-//     }
-//     else{ 
-//         console.log("Couldn't get the data from database so, data collected from local pre stored json file!");
-//     }
-// });
+const getDataByQuery = "SELECT * FROM ZoroDb;";
+let haveUpdate;
+con.query(getDataByQuery, (err, result)=>{
+    if(!err){
+        haveUpdate = result;
+         jsonData  = result;
+        console.log("Data Imported Successfully From Mysql!");
+    }
+    else{ 
+        console.log("Couldn't get the data from database so, data collected from local pre stored json file!");
+    }
+});
 
 
 app.get("/", (req, res)=>{
     res.render("root", {pageName: "Free Anime Streaming Online"}); 
-    // if(haveUpdate){
-    //             writeFileInAsync("./dataFromMysql.json", haveUpdate); //already file stored don't try to run this function otherwise you will lose data if you have no access to mysql data.
-    // } 
+    if(haveUpdate){
+                writeFileInAsync("./dataFromMysql.json", haveUpdate); //already file stored don't try to run this function otherwise you will lose data if you have no access to mysql data.
+    } 
 })
 
 app.get("/home"  , (req, res)=>{
